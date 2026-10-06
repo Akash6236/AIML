@@ -20,8 +20,7 @@ print("\nActual Values")
 print(y_test.values)
 print("\nPredicted Values")
 print(prediction)
-print("\n Accuracy")
-print(accuracy_score(y_test,prediction)*100)
+print("\nAccuracy : {:.2f}%".format(accuracy_score(y_test,prediction)*100))
 
 print("\n ------loan approved prediction-------")
 
@@ -36,11 +35,4 @@ result = model.predict(new_customer)
 if result[0] == "Yes": 
     print("\nLoan Approved") 
 else: 
-    print("\nLoan Rejected") 
-    
-prediction = model.predict(X_test) 
-accuracy = accuracy_score(y_test, prediction) * 100 
-print("\n--------------------------------") 
-print("Model Performance") 
-print("--------------------------------") 
-print(f"Accuracy : {accuracy:.2f}%")
+    print("\nLoan Rejected")
