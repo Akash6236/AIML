@@ -24,6 +24,8 @@ model.fit(X_train,y_train)
 prediction=model.predict(X_test)
 
 print("\n Actual Categories")
+print(y_test.values)
+print("\n Predicted Categories")
 print(prediction)
 
 accuracy=accuracy_score(y_test,prediction)
